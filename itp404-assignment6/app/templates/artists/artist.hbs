@@ -1,0 +1,20 @@
+{{#each model.songs as |song|}}
+  <div class="song">
+    {{song.title}}
+  </div>
+{{else}}
+    <p>
+    No songs for this artist
+    </p>
+{{/each}}
+
+<br>
+<form onsubmit={{action 'createSong'}}>
+  Name: {{input type="text" value=songName}}
+  <br>
+  Price: {{input type="text" value=price}}
+  <br>
+  Created By: {{input type="text" value=createdBy}}
+
+  <button type ="submit" class="btn btn-primary"> Create Song </button>
+</form>

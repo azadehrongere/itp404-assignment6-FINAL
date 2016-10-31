@@ -1,0 +1,23 @@
+
+<div class ="container">
+  <div class ="row">
+  <div class ="col-md-4">
+    <div>
+      {{#link-to 'artists.new'}}
+        <p> New Artist </p>
+      {{/link-to}}
+    </div>
+    {{#each model.artists as |artist|}}
+      <div>
+        {{#link-to 'artists.artist' artist.id}}
+          {{artist.name}}
+        {{/link-to}}
+      </div>
+
+    {{/each}}
+  </div>
+  <div class ="col-md-8">
+  {{outlet}}
+  </div>
+  </div>
+</div>
